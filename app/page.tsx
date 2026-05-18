@@ -109,7 +109,7 @@ const guides = [
   {
     name: "Bruno",
     image: "/image/pai.jpg",
-    imageClassName: "object-[40%]",
+    imageClassName: "object-[center_46%]",
     text: [
       "Vivo no Japão há mais de 24 anos. Além de guia, trabalho como intérprete, o que me ajudou a entender a fundo a cultura e o jeito de ser dos japoneses.",
       "Depois de anos trabalhando em ambientes formais, percebi que o que realmente me dá prazer é ver o brilho no olho de quem descobre um detalhe curioso da cultura.",
@@ -119,7 +119,7 @@ const guides = [
   {
     name: "Jacque",
     image: "/image/mae.jpg",
-    imageClassName: "object-[center_50%]",
+    imageClassName: "object-[center_53%]",
     text: [
       "Viver no Japão há mais de 20 anos me deu muito mais do que a fluência no idioma; me deu uma nova forma de enxergar o mundo.",
       "Minha trajetória como guia nasceu do desejo de mostrar que o Japão pode ser acolhedor e surpreendente ao mesmo tempo. Adoro planejar cada logística e garantir que tudo flua com leveza.",
