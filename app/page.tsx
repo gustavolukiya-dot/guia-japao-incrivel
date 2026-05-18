@@ -208,7 +208,7 @@ export default function Home() {
               <h2 className="font-serifDisplay text-5xl leading-[1.08] md:text-6xl">
                 Por que nos escolher?
               </h2>
-              <div className="mt-8">
+              <div className="mt-2">
                 <WhyAccordion reasons={reasons} />
               </div>
             </div>
