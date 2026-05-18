@@ -109,7 +109,7 @@ const guides = [
   {
     name: "Bruno",
     image: "/image/pai.jpg",
-    imageClassName: "object-[center_53%]",
+    imageClassName: "object-[center_30%]",
     text: [
       "Vivo no Japão há mais de 24 anos. Além de guia, trabalho como intérprete, o que me ajudou a entender a fundo a cultura e o jeito de ser dos japoneses.",
       "Depois de anos trabalhando em ambientes formais, percebi que o que realmente me dá prazer é ver o brilho no olho de quem descobre um detalhe curioso da cultura.",
