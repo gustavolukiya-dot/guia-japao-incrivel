@@ -27,7 +27,11 @@ export const metadata: Metadata = {
     description: "Tours personalizados em português por guias brasileiros que vivem no Japão há mais de 20 anos.",
     images: ["https://www.guiajapaoincrivel.com/image/hero.jpg"],
   },
+icons: {
+    icon: "/favicon.png",
+  },
 };
+
 
 export default function RootLayout({
   children,
