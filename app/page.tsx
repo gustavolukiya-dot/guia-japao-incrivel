@@ -199,18 +199,23 @@ export default function Home() {
         </div>
       </section>
 
-<section id="escolher" className="why-section bg-[#faf8f3] px-5 py-16 md:px-8 lg:py-20">
+<section id="escolher" className="why-section bg-[#faf8f3] px-5 py-16 md:px-8 lg:py-24">
         <div className="mx-auto max-w-7xl">
+          <div className="why-inner flex flex-col gap-10 lg:flex-row lg:items-center lg:justify-between">
 
-          <h2 className="font-serifDisplay text-5xl leading-[1.08] md:text-6xl lg:w-[48%]">
-            Por que nos escolher?
-          </h2>
+            {/* Esquerda — título + accordion */}
+            <div className="why-copy lg:order-1 lg:w-[48%]">
+              <h2 className="font-serifDisplay text-5xl leading-[1.08] md:text-6xl">
+                Por que nos escolher?
+              </h2>
+              <div className="mt-8">
+                <WhyAccordion reasons={reasons} />
+              </div>
+            </div>
 
-          <div className="why-inner mt-10 flex flex-col gap-10 lg:flex-row lg:items-start lg:justify-between">
-
-            {/* Foto — aparece antes do accordion no mobile, direita no desktop */}
-            <div className="why-photo relative mx-auto w-full max-w-[480px] lg:order-2 lg:mx-0 lg:w-[44%] lg:pt-8">
-              <div className="why-frame relative ml-auto h-[380px] w-[84%] md:h-[520px] lg:h-[640px]">
+            {/* Direita — foto */}
+            <div className="why-photo relative mx-auto w-full max-w-[420px] lg:order-2 lg:mx-0 lg:w-[44%]">
+              <div className="why-frame relative ml-auto h-[340px] w-[84%] md:h-[480px] lg:h-[560px]">
                 <div className="why-red-block absolute inset-0 bg-japan-red" aria-hidden="true" />
                 <img
                   src="/image/pai-mae.jpg"
@@ -218,11 +223,6 @@ export default function Home() {
                   className="relative h-full w-full object-cover object-center"
                 />
               </div>
-            </div>
-
-            {/* Accordion — aparece depois da foto no mobile, esquerda no desktop */}
-            <div className="why-copy lg:order-1 lg:w-[48%]">
-              <WhyAccordion reasons={reasons} />
             </div>
 
           </div>
