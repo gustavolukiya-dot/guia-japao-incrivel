@@ -200,16 +200,19 @@ export default function Home() {
       </section>
 
 <section id="escolher" className="why-section bg-[#faf8f3] px-5 py-12 md:px-8 lg:py-24">
-{/* Título */}
+        <div className="mx-auto max-w-7xl">
+          <div className="why-inner flex flex-col gap-12 lg:flex-row lg:items-center lg:justify-between">
+
+            {/* Título + accordion */}
             <div className="why-copy lg:order-1 lg:w-[48%]">
               <h2 className="font-serifDisplay text-4xl leading-[1.08] md:text-6xl">
                 Por que nos escolher?
               </h2>
 
-              {/* Foto — só no mobile aparece aqui */}
-              <div className="why-photo relative mx-auto my-16 w-full max-w-[340px] lg:hidden">
-                <div className="why-frame relative ml-auto h-[280px] w-[84%]">
-                  <div className="why-red-block absolute inset-0 bg-japan-red" aria-hidden="true" />
+              {/* Foto — só no mobile */}
+              <div className="relative mx-auto my-10 w-full max-w-[340px] lg:hidden">
+                <div className="relative ml-auto h-[280px] w-[84%]">
+                  <div className="absolute inset-0 bg-japan-red" aria-hidden="true" />
                   <img
                     src="/image/pai-mae.jpg"
                     alt="Bruno e Jacque, guias brasileiros no Japão"
@@ -223,9 +226,9 @@ export default function Home() {
               </div>
             </div>
 
-            {/* Foto — só no desktop aparece aqui */}
-            <div className="why-photo relative mx-auto hidden w-full max-w-[340px] lg:order-2 lg:mx-0 lg:block lg:w-[44%]">
-              <div className="why-frame relative ml-auto h-[280px] w-[84%] md:h-[480px] lg:h-[560px]">
+            {/* Foto — só no desktop */}
+            <div className="relative mx-auto hidden w-full max-w-[340px] lg:order-2 lg:mx-0 lg:block lg:w-[44%]">
+              <div className="why-frame relative ml-auto h-[480px] lg:h-[560px]" style={{width: "84%"}}>
                 <div className="why-red-block absolute inset-0 bg-japan-red" aria-hidden="true" />
                 <img
                   src="/image/pai-mae.jpg"
@@ -234,6 +237,9 @@ export default function Home() {
                 />
               </div>
             </div>
+
+          </div>
+        </div>
       </section>
 
       <section id="sobre" className="bg-white px-5 py-24 md:px-8">
