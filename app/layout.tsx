@@ -47,6 +47,15 @@ export default function RootLayout({
           href="https://fonts.googleapis.com/css2?family=Bitter:wght@400;500;600;700&family=Young+Serif&display=swap"
           rel="stylesheet"
         />
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-WH0W8M3J5B"></script>
+        <script dangerouslySetInnerHTML={{
+          __html: `
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-WH0W8M3J5B');
+          `
+        }} />
       </head>
       <body className="font-body antialiased">{children}</body>
     </html>
