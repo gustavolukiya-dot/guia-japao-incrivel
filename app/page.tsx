@@ -207,7 +207,7 @@ export default function Home() {
               </h2>
 
               {/* Foto — só no mobile aparece aqui */}
-              <div className="why-photo relative mx-auto my-8 w-full max-w-[340px] lg:hidden">
+              <div className="why-photo relative mx-auto my-12 w-full max-w-[340px] lg:hidden">
                 <div className="why-frame relative ml-auto h-[280px] w-[84%]">
                   <div className="why-red-block absolute inset-0 bg-japan-red" aria-hidden="true" />
                   <img
