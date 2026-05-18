@@ -201,18 +201,18 @@ export default function Home() {
 
 <section id="escolher" className="why-section bg-[#faf8f3] px-5 py-12 md:px-8 lg:py-24">
         <div className="mx-auto max-w-7xl">
-          <div className="why-inner flex flex-col gap-12 lg:flex-row lg:items-start lg:justify-between">
+          <div className="why-inner flex flex-col gap-12 lg:flex-row lg:items-center lg:justify-between">
 
             {/* Título + accordion */}
             <div className="why-copy lg:order-1 lg:w-[48%]">
-              <h2 className="font-serifDisplay text-4xl leading-[1.08] lg:text-6xl">
+              <h2 className="font-serifDisplay text-4xl leading-[1.08] lg:text-6xl lg:mb-8">
                 Por que nos escolher?
               </h2>
 
               {/* Foto — só no mobile */}
               <div className="relative mx-auto my-10 w-full max-w-[340px] lg:hidden">
                 <div className="relative ml-auto h-[280px] w-[84%]">
-                  <div className="absolute inset-0 bg-japan-red" aria-hidden="true" />
+                  <div className="absolute inset-0 translate-x-[-12px] translate-y-[-12px] bg-japan-red" aria-hidden="true" />
                   <img
                     src="/image/pai-mae.jpg"
                     alt="Bruno e Jacque, guias brasileiros no Japão"
