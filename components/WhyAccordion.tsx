@@ -11,7 +11,7 @@ export function WhyAccordion({ reasons }: { reasons: Reason[] }) {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   return (
-    <div className="mt-28 divide-y divide-black/35 border-y border-black/35 lg:mt-32">
+    <div className="mt-4 divide-y divide-black/35 border-y border-black/35 lg:mt-8">
       {reasons.map((reason, index) => {
         const isOpen = openIndex === index;
 
