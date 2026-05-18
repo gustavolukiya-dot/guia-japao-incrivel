@@ -205,7 +205,7 @@ export default function Home() {
 
             {/* Título + accordion */}
             <div className="why-copy lg:order-1 lg:w-[48%]">
-              <h2 className="font-serifDisplay text-4xl leading-[1.08] md:text-6xl">
+              <h2 className="font-serifDisplay text-4xl leading-[1.08] lg:text-6xl">
                 Por que nos escolher?
               </h2>
 
@@ -221,14 +221,14 @@ export default function Home() {
                 </div>
               </div>
 
-              <div className="mt-4">
+              <div className="mt-6 lg:mt-0">
                 <WhyAccordion reasons={reasons} />
               </div>
             </div>
 
             {/* Foto — só no desktop */}
-            <div className="relative mx-auto hidden w-full max-w-[340px] lg:order-2 lg:mx-0 lg:block lg:w-[44%]">
-              <div className="why-frame relative ml-auto h-[480px] w-[90%] lg:h-[560px]">
+            <div className="relative mx-auto hidden w-full lg:order-2 lg:mx-0 lg:block lg:w-[44%]">
+              <div className="why-frame relative ml-auto lg:h-[640px] lg:w-[84%]">
                 <div className="why-red-block absolute inset-0 bg-japan-red" aria-hidden="true" />
                 <img
                   src="/image/pai-mae.jpg"
