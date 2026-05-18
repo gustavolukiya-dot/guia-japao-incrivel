@@ -228,7 +228,7 @@ export default function Home() {
 
             {/* Foto — só no desktop */}
             <div className="relative mx-auto hidden w-full max-w-[340px] lg:order-2 lg:mx-0 lg:block lg:w-[44%]">
-              <div className="why-frame relative ml-auto h-[480px] w-full lg:h-[560px]">
+              <div className="why-frame relative ml-auto h-[480px] w-[90%] lg:h-[560px]">
                 <div className="why-red-block absolute inset-0 bg-japan-red" aria-hidden="true" />
                 <img
                   src="/image/pai-mae.jpg"
