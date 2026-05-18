@@ -203,18 +203,8 @@ export default function Home() {
         <div className="mx-auto max-w-7xl">
           <div className="why-inner flex flex-col gap-12 lg:flex-row lg:items-center lg:justify-between">
 
-            {/* Esquerda — título + accordion */}
-            <div className="why-copy lg:order-2 lg:w-[48%]">
-              <h2 className="font-serifDisplay text-4xl leading-[1.08] md:text-6xl">
-                Por que nos escolher?
-              </h2>
-              <div className="mt-4">
-                <WhyAccordion reasons={reasons} />
-              </div>
-            </div>
-
-            {/* Direita — foto */}
-            <div className="why-photo relative mx-auto w-full max-w-[340px] lg:order-1 lg:mx-0 lg:w-[44%]">
+            {/* Foto — aparece primeiro no mobile */}
+            <div className="why-photo relative mx-auto w-full max-w-[340px] lg:order-2 lg:mx-0 lg:w-[44%]">
               <div className="why-frame relative ml-auto h-[280px] w-[84%] md:h-[480px] lg:h-[560px]">
                 <div className="why-red-block absolute inset-0 bg-japan-red" aria-hidden="true" />
                 <img
@@ -222,6 +212,16 @@ export default function Home() {
                   alt="Bruno e Jacque, guias brasileiros no Japão"
                   className="relative h-full w-full object-cover object-center"
                 />
+              </div>
+            </div>
+
+            {/* Título + accordion — aparece depois no mobile */}
+            <div className="why-copy lg:order-1 lg:w-[48%]">
+              <h2 className="font-serifDisplay text-4xl leading-[1.08] md:text-6xl">
+                Por que nos escolher?
+              </h2>
+              <div className="mt-4">
+                <WhyAccordion reasons={reasons} />
               </div>
             </div>
 
