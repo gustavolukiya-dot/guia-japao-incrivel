@@ -204,7 +204,7 @@ export default function Home() {
           <div className="why-inner flex flex-col gap-12 lg:flex-row lg:items-center lg:justify-between">
 
             {/* Esquerda — título + accordion */}
-            <div className="why-copy lg:order-1 lg:w-[48%]">
+            <div className="why-copy lg:order-2 lg:w-[48%]">
               <h2 className="font-serifDisplay text-4xl leading-[1.08] md:text-6xl">
                 Por que nos escolher?
               </h2>
@@ -214,7 +214,7 @@ export default function Home() {
             </div>
 
             {/* Direita — foto */}
-            <div className="why-photo relative mx-auto w-full max-w-[340px] lg:order-2 lg:mx-0 lg:w-[44%]">
+            <div className="why-photo relative mx-auto w-full max-w-[340px] lg:order-1 lg:mx-0 lg:w-[44%]">
               <div className="why-frame relative ml-auto h-[280px] w-[84%] md:h-[480px] lg:h-[560px]">
                 <div className="why-red-block absolute inset-0 bg-japan-red" aria-hidden="true" />
                 <img
