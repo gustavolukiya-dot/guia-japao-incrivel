@@ -212,7 +212,7 @@ export default function Home() {
               {/* Foto — só no mobile */}
               <div className="relative mx-auto my-10 w-full max-w-[340px] lg:hidden">
                 <div className="relative ml-auto h-[280px] w-[84%]">
-                  <div className="absolute inset-0 translate-x-[-12px] translate-y-[-12px] bg-japan-red" aria-hidden="true" />
+                  <div className="absolute inset-0 translate-x-[-20px] translate-y-[-20px] bg-japan-red" aria-hidden="true" />
                   <img
                     src="/image/pai-mae.jpg"
                     alt="Bruno e Jacque, guias brasileiros no Japão"
