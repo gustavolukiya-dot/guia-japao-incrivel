@@ -201,7 +201,7 @@ export default function Home() {
 
 <section id="escolher" className="why-section bg-[#faf8f3] px-5 py-12 md:px-8 lg:py-24">
         <div className="mx-auto max-w-7xl">
-          <div className="why-inner flex flex-col gap-10 lg:flex-row lg:items-center lg:justify-between">
+          <div className="why-inner flex flex-col gap-12 lg:flex-row lg:items-center lg:justify-between">
 
             {/* Esquerda — título + accordion */}
             <div className="why-copy lg:order-1 lg:w-[48%]">
