@@ -117,6 +117,21 @@ export function TestimonialsCarousel() {
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" className="h-5 w-5"><path d="M9 18l6-6-6-6" /></svg>
         </button>
       </div>
+
+      {/* Botão de avaliação */}
+      <div className="mt-12 flex justify-center px-5">
+        <a
+          href="https://g.page/r/CTYZqxxtM1gnEAE/review"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center gap-2 rounded-full border-2 border-japan-red px-8 py-4 text-sm font-semibold text-japan-red transition hover:bg-japan-red hover:text-white"
+        >
+          <svg viewBox="0 0 24 24" fill="currentColor" className="h-5 w-5" aria-hidden="true">
+            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+          </svg>
+          Deixe sua avaliação no Google!
+        </a>
+      </div>
     </section>
   );
 }
