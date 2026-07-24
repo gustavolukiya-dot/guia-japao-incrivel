@@ -11,4 +11,4 @@
 :HL["/image/hiroshima.jpg","image"]
 :HL["/image/kanazawa.jpg","image"]
 :HL["/image/nara.jpg","image"]
-0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}},"staleTime":300,"buildId":"YNefTprAuni0DK3Ju1Mb0"}
+0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}},"staleTime":300,"buildId":"uQiM6rYPbXEuLVqteVgrD"}
