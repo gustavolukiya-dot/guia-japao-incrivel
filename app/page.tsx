@@ -1,6 +1,7 @@
 import { WhyAccordion } from "../components/WhyAccordion";
 import { TestimonialsCarousel } from "../components/TestimonialsCarousel";
 import { MobileMenu } from "../components/MobileMenu";
+import { FadeIn, FadeInStagger, FadeInStaggerItem } from "../components/FadeIn";
 const WA_LINK = "https://wa.me/819065931930";
 const stats = [
   ["pin", "15+", "Destinos incríveis"],
@@ -74,7 +75,7 @@ const destinations = [
     description: "O ícone do Japão: a sagrada montanha onde a natureza encontra a espiritualidade.",
   },
   {
-      image: "/image/kyoto.jpeg",
+    image: "/image/kyoto.jpeg",
     name: "Kyoto",
     description: "Templos milenares, geishas e a alma tradicional do Japão preservada no tempo.",
   },
@@ -139,7 +140,7 @@ export default function Home() {
             "linear-gradient(90deg, rgba(18,16,15,.76), rgba(18,16,15,.28)), url('/image/hero.jpg')",
         }}
       >
-<nav className="fixed left-0 right-0 top-0 z-50 border-b border-white/10 bg-black/20 backdrop-blur-xl">
+        <nav className="fixed left-0 right-0 top-0 z-50 border-b border-white/10 bg-black/20 backdrop-blur-xl">
           <div className="mx-auto flex max-w-7xl items-center justify-between px-5 py-4 md:px-8">
             <a href="#inicio" className="font-serifDisplay text-xl text-white md:text-2xl">
               Guia Japão Incrível
@@ -161,73 +162,91 @@ export default function Home() {
 
         <div className="mx-auto flex min-h-screen max-w-7xl flex-col justify-center px-5 pb-10 pt-28 md:px-8 md:pb-16">
           <div className="max-w-3xl text-white">
-            <p className="mb-5 text-sm uppercase tracking-[0.28em] text-white/72">
-              Tours privativos em português
-            </p>
-            <h1 className="font-serifDisplay text-5xl leading-[1.02] md:text-7xl lg:text-8xl">
-              Descubra o Japão com Quem Conhece
-            </h1>
-            <p className="mt-6 max-w-2xl text-lg leading-8 text-white/84 md:text-xl">
-              Tours personalizados em português por guias brasileiros que vivem no Japão há
-              mais de 20 anos.
-            </p>
-           <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-            <a
-            href="#servicos" className="rounded-full bg-white/15 px-10 py-4 text-center text-sm font-semibold text-white backdrop-blur border border-white/55 transition hover:bg-white/25 sm:min-w-[220px]">
-              Serviços
-            </a>
-            <a href="#contato" className="rounded-full bg-japan-red px-10 py-4 text-center text-sm font-semibold text-white shadow-soft transition hover:bg-[#a81f1f] sm:min-w-[220px]">
-              Fale conosco
-            </a>
-          </div>
+            <FadeIn>
+              <p className="mb-5 text-sm uppercase tracking-[0.28em] text-white/72">
+                Tours privativos em português
+              </p>
+            </FadeIn>
+            <FadeIn delay={0.1}>
+              <h1 className="font-serifDisplay text-5xl leading-[1.02] md:text-7xl lg:text-8xl">
+                Descubra o Japão com Quem Conhece
+              </h1>
+            </FadeIn>
+            <FadeIn delay={0.2}>
+              <p className="mt-6 max-w-2xl text-lg leading-8 text-white/84 md:text-xl">
+                Tours personalizados em português por guias brasileiros que vivem no Japão há
+                mais de 20 anos.
+              </p>
+            </FadeIn>
+            <FadeIn delay={0.3}>
+              <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+
+                <a href="#servicos"
+                  className="rounded-full bg-white/15 px-10 py-4 text-center text-sm font-semibold text-white backdrop-blur border border-white/55 transition hover:bg-white/25 sm:min-w-[220px]"
+                >
+                  Serviços
+                </a>
+
+                <a href="#contato"
+                  className="rounded-full bg-japan-red px-10 py-4 text-center text-sm font-semibold text-white shadow-soft transition hover:bg-[#a81f1f] sm:min-w-[220px]"
+                >
+                  Fale conosco
+                </a>
+              </div>
+            </FadeIn>
           </div>
 
           <div className="mt-12 grid max-w-4xl grid-cols-3 gap-2 md:gap-3">
             {stats.map(([icon, value, label]) => (
-              <div
-                key={label}
-                className="flex min-h-[120px] flex-col items-center justify-center rounded-lg border border-white/30 bg-black/18 p-4 text-center text-white shadow-soft backdrop-blur-2xl"
-              >
-                <StatIcon icon={icon} />
-                <strong className="mt-2 font-serifDisplay text-2xl md:text-4xl">{value}</strong>
-                <p className="mt-1 text-[10px] font-semibold uppercase tracking-wide text-white/78 md:text-xs">
-                  {label}
-                </p>
-              </div>
+              <FadeIn key={label} delay={0.4}>
+                <div className="flex min-h-[120px] flex-col items-center justify-center rounded-lg border border-white/30 bg-black/18 p-4 text-center text-white shadow-soft backdrop-blur-2xl">
+                  <StatIcon icon={icon} />
+                  <strong className="mt-2 font-serifDisplay text-2xl md:text-4xl">{value}</strong>
+                  <p className="mt-1 text-[10px] font-semibold uppercase tracking-wide text-white/78 md:text-xs">
+                    {label}
+                  </p>
+                </div>
+              </FadeIn>
             ))}
           </div>
         </div>
       </section>
 
-<section id="escolher" className="why-section bg-[#faf8f3] px-5 py-12 md:px-8 lg:py-24">
+      <section id="escolher" className="why-section bg-[#faf8f3] px-5 py-12 md:px-8 lg:py-24">
         <div className="mx-auto max-w-7xl">
           <div className="why-inner flex flex-col gap-12 lg:flex-row lg:items-center lg:justify-between">
 
             {/* Título + accordion */}
             <div className="why-copy lg:order-1 lg:w-[48%]">
-              <h2 className="font-serifDisplay text-4xl leading-[1.08] lg:text-6xl lg:mb-8">
-                Por que nos escolher?
-              </h2>
+              <FadeIn>
+                <h2 className="font-serifDisplay text-4xl leading-[1.08] lg:text-6xl lg:mb-8">
+                  Por que nos escolher?
+                </h2>
+              </FadeIn>
 
               {/* Foto — só no mobile */}
-              <div className="relative mx-auto my-10 w-full max-w-[340px] lg:hidden">
-                <div className="relative ml-auto h-[280px] w-[84%]">
-                  <div className="absolute inset-0 translate-x-[-20px] translate-y-[-20px] bg-japan-red" aria-hidden="true" />
-                  <img
-                    src="/image/pai-mae.jpg"
-                    alt="Bruno e Jacque, guias brasileiros no Japão"
-                    className="relative h-full w-full object-cover object-center"
-                  />
+              <FadeIn>
+                <div className="relative mx-auto my-10 w-full max-w-[340px] lg:hidden">
+                  <div className="relative ml-auto h-[280px] w-[84%]">
+                    <div className="absolute inset-0 translate-x-[-20px] translate-y-[-20px] bg-japan-red" aria-hidden="true" />
+                    <img
+                      src="/image/pai-mae.jpg"
+                      alt="Bruno e Jacque, guias brasileiros no Japão"
+                      className="relative h-full w-full object-cover object-center"
+                    />
+                  </div>
                 </div>
-              </div>
+              </FadeIn>
 
-              <div className="mt-6 lg:mt-0">
-                <WhyAccordion reasons={reasons} />
-              </div>
+              <FadeIn delay={0.1}>
+                <div className="mt-6 lg:mt-0">
+                  <WhyAccordion reasons={reasons} />
+                </div>
+              </FadeIn>
             </div>
 
             {/* Foto — só no desktop */}
-            <div className="relative mx-auto hidden w-full lg:order-2 lg:mx-0 lg:block lg:w-[44%]">
+            <FadeIn direction="right" className="relative mx-auto hidden w-full lg:order-2 lg:mx-0 lg:block lg:w-[44%]">
               <div className="why-frame relative ml-auto lg:h-[640px] lg:w-[84%]">
                 <div className="why-red-block absolute inset-0 bg-japan-red" aria-hidden="true" />
                 <img
@@ -236,7 +255,7 @@ export default function Home() {
                   className="relative h-full w-full object-cover object-center"
                 />
               </div>
-            </div>
+            </FadeIn>
 
           </div>
         </div>
@@ -244,170 +263,182 @@ export default function Home() {
 
       <section id="sobre" className="bg-white px-5 py-24 md:px-8">
         <div className="mx-auto max-w-7xl">
-          <div className="mx-auto max-w-3xl text-center">
-            <p className="text-sm uppercase tracking-[0.24em] text-japan-red">Sobre nós</p>
-            <h2 className="mt-4 font-serifDisplay text-4xl leading-tight md:text-6xl">
-              Quem somos nós?
-            </h2>
-            <p className="mt-6 text-lg leading-8 text-black/68">
-              Somos o Bruno e a Jacque, seus guias brasileiros no Japão.
-            </p>
-            <p className="mt-3 text-lg leading-8 text-black/68">
-              Vivemos aqui há mais de 20 anos e queremos que você experimente o país de forma
-              autêntica, segura e sem preocupações.
-            </p>
-          </div>
-<div className="mt-12 grid gap-6 md:grid-cols-2">
-            {guides.map((guide) => (
-              <article key={guide.name} className="bg-japan-cream">
-                <img
-                  src={guide.image}
-                  alt={guide.name}
-                  className={`h-72 w-full object-cover ${guide.imageClassName}`}
-                />
-                <div className="p-7 text-center md:p-9 md:text-left">
-                  <h3 className="font-serifDisplay text-4xl">{guide.name}</h3>
-                  <div className="mt-4 space-y-4 leading-8 text-black/68">
-                    {guide.text.map((paragraph) => (
-                      <p key={paragraph}>{paragraph}</p>
-                    ))}
+          <FadeIn>
+            <div className="mx-auto max-w-3xl text-center">
+              <p className="text-sm uppercase tracking-[0.24em] text-japan-red">Sobre nós</p>
+              <h2 className="mt-4 font-serifDisplay text-4xl leading-tight md:text-6xl">
+                Quem somos nós?
+              </h2>
+              <p className="mt-6 text-lg leading-8 text-black/68">
+                Somos o Bruno e a Jacque, seus guias brasileiros no Japão.
+              </p>
+              <p className="mt-3 text-lg leading-8 text-black/68">
+                Vivemos aqui há mais de 20 anos e queremos que você experimente o país de forma
+                autêntica, segura e sem preocupações.
+              </p>
+            </div>
+          </FadeIn>
+
+          <div className="mt-12 grid gap-6 md:grid-cols-2">
+            {guides.map((guide, i) => (
+              <FadeIn key={guide.name} delay={i * 0.1}>
+                <article className="bg-japan-cream">
+                  <img
+                    src={guide.image}
+                    alt={guide.name}
+                    className={`h-72 w-full object-cover ${guide.imageClassName}`}
+                  />
+                  <div className="p-7 text-center md:p-9 md:text-left">
+                    <h3 className="font-serifDisplay text-4xl">{guide.name}</h3>
+                    <div className="mt-4 space-y-4 leading-8 text-black/68">
+                      {guide.text.map((paragraph) => (
+                        <p key={paragraph}>{paragraph}</p>
+                      ))}
+                    </div>
                   </div>
-                </div>
-              </article>
+                </article>
+              </FadeIn>
             ))}
           </div>
         </div>
       </section>
 
-<section id="servicos" className="bg-[#faf8f3] px-5 py-24 md:px-8">
+      <section id="servicos" className="bg-[#faf8f3] px-5 py-24 md:px-8">
         <div className="mx-auto max-w-6xl">
-          <div className="mx-auto max-w-3xl text-center">
-            <h2 className="font-serifDisplay text-4xl leading-tight md:text-5xl">
-              Nossos serviços
-            </h2>
-            <p className="mt-8 leading-8 text-black/68">
-              Oferecemos experiências completas e personalizadas para sua viagem perfeita.
-            </p>
-          </div>
+          <FadeIn>
+            <div className="mx-auto max-w-3xl text-center">
+              <h2 className="font-serifDisplay text-4xl leading-tight md:text-5xl">
+                Nossos serviços
+              </h2>
+              <p className="mt-8 leading-8 text-black/68">
+                Oferecemos experiências completas e personalizadas para sua viagem perfeita.
+              </p>
+            </div>
+          </FadeIn>
 
           <div className="mx-auto mt-14 grid max-w-6xl grid-cols-2 gap-4 md:mt-20 md:gap-6 lg:grid-cols-3">
-            {services.map((service) => (
-              <article
-                key={service.title}
-                className="rounded-lg border border-black/5 bg-white p-6 shadow-[0_18px_45px_rgba(18,16,15,0.07)] transition duration-300 hover:-translate-y-1 hover:shadow-[0_24px_55px_rgba(18,16,15,0.1)] md:p-9"
-              >
-                <ServiceIcon icon={service.icon} />
-                <h3 className="mt-4 font-serifDisplay text-lg md:mt-6 md:text-xl">{service.title}</h3>
-            <p className="hidden md:block mt-4 text-sm leading-7 text-black/62">{service.text}</p>
-                <p className="md:hidden mt-3 text-xs leading-6 text-black/62">{service.textMobile}</p>
-              </article>
+            {services.map((service, i) => (
+              <FadeIn key={service.title} delay={i * 0.06} className="h-full">
+                <article className="flex h-full flex-col rounded-lg border border-black/5 bg-white p-6 shadow-[0_18px_45px_rgba(18,16,15,0.07)] transition duration-300 hover:-translate-y-1 hover:shadow-[0_24px_55px_rgba(18,16,15,0.1)] md:p-9">
+                  <ServiceIcon icon={service.icon} />
+                  <h3 className="mt-4 font-serifDisplay text-lg md:mt-6 md:text-xl">{service.title}</h3>
+                  <p className="hidden md:block mt-4 text-sm leading-7 text-black/62">{service.text}</p>
+                  <p className="md:hidden mt-3 text-xs leading-6 text-black/62">{service.textMobile}</p>
+                </article>
+              </FadeIn>
             ))}
           </div>
 
-          <div className="mx-auto mt-14 max-w-2xl rounded-xl bg-japan-ink px-8 py-12 text-center text-white md:mt-20">
-            <h3 className="font-serifDisplay text-2xl md:text-3xl">
-              Solicite um orçamento personalizado
-            </h3>
-            <p className="mt-4 text-sm leading-7 text-white/60">
-              Entre em contato conosco para discutir suas preferências e criarmos o roteiro perfeito para você.
-            </p>
-            <a
-              href={WA_LINK}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="mt-8 inline-flex items-center gap-2 rounded-full bg-japan-red px-8 py-4 text-sm font-semibold text-white transition hover:bg-[#a81f1f]"
-            >
-              <WhatsAppIcon />
-              Fale conosco no WhatsApp
-            </a>
-          </div>
+          <FadeIn>
+            <div className="mx-auto mt-14 max-w-2xl rounded-xl bg-japan-ink px-8 py-12 text-center text-white md:mt-20">
+              <h3 className="font-serifDisplay text-2xl md:text-3xl">
+                Solicite um orçamento personalizado
+              </h3>
+              <p className="mt-4 text-sm leading-7 text-white/60">
+                Entre em contato conosco para discutir suas preferências e criarmos o roteiro perfeito para você.
+              </p>
+
+              <a href={WA_LINK}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-8 inline-flex items-center gap-2 rounded-full bg-japan-red px-8 py-4 text-sm font-semibold text-white transition hover:bg-[#a81f1f]"
+              >
+                <WhatsAppIcon />
+                Fale conosco no WhatsApp
+              </a>
+            </div>
+          </FadeIn>
         </div>
       </section>
 
-<section id="destinos" className="bg-white px-5 py-24 md:px-8">
+      <section id="destinos" className="bg-white px-5 py-24 md:px-8">
         <div className="mx-auto max-w-7xl">
-          <div className="mx-auto max-w-3xl text-center">
-            <h2 className="font-serifDisplay text-4xl leading-tight md:text-5xl">
-              Experiências no Japão
-            </h2>
-            <p className="mt-5 leading-8 text-black/62">
-              Estes são apenas alguns dos destinos que oferecemos. Entre em contato para
-              conhecer todas as possibilidades!
-            </p>
-          </div>
+          <FadeIn>
+            <div className="mx-auto max-w-3xl text-center">
+              <h2 className="font-serifDisplay text-4xl leading-tight md:text-5xl">
+                Experiências no Japão
+              </h2>
+              <p className="mt-5 leading-8 text-black/62">
+                Estes são apenas alguns dos destinos que oferecemos. Entre em contato para
+                conhecer todas as possibilidades!
+              </p>
+            </div>
+          </FadeIn>
 
-          <div className="mt-14 grid grid-cols-2 gap-4 md:gap-6 lg:grid-cols-4">
+          <FadeInStagger staggerDelay={0.1} className="mt-14 grid grid-cols-2 gap-4 md:gap-6 lg:grid-cols-4">
             {destinations.map((dest) => (
-              <article
-                key={dest.name}
-                className="overflow-hidden rounded-xl border border-black/6 bg-white shadow-[0_4px_20px_rgba(18,16,15,0.07)] transition duration-300 hover:-translate-y-1 hover:shadow-[0_12px_36px_rgba(18,16,15,0.12)]"
-              >
-<div className="h-28 overflow-hidden md:h-52">
-                  <img
-                    src={dest.image}
-                    alt={dest.name}
-                    className="h-full w-full object-cover transition duration-500 hover:scale-105"
-                  />
-                </div>
-                <div className="p-3 md:p-6">
-                  <h3 className="font-serifDisplay text-xl md:text-2xl">{dest.name}</h3>
-                  <p className="mt-1 text-xs leading-6 text-black/62 md:mt-3 md:text-sm md:leading-7">{dest.description}</p>
-                </div>
-              </article>
+              <FadeInStaggerItem key={dest.name} className="h-full">
+                <article className="flex h-full flex-col overflow-hidden rounded-xl border border-black/6 bg-white shadow-[0_4px_20px_rgba(18,16,15,0.07)] transition duration-300 hover:-translate-y-1 hover:shadow-[0_12px_36px_rgba(18,16,15,0.12)]">
+                  <div className="h-28 overflow-hidden md:h-52">
+                    <img
+                      src={dest.image}
+                      alt={dest.name}
+                      className="h-full w-full object-cover transition duration-500 hover:scale-105"
+                    />
+                  </div>
+                  <div className="p-3 md:p-6">
+                    <h3 className="font-serifDisplay text-xl md:text-2xl">{dest.name}</h3>
+                    <p className="mt-1 text-xs leading-6 text-black/62 md:mt-3 md:text-sm md:leading-7">{dest.description}</p>
+                  </div>
+                </article>
+              </FadeInStaggerItem>
             ))}
-          </div>
+          </FadeInStagger>
         </div>
       </section>
 
-<TestimonialsCarousel />
+      <TestimonialsCarousel />
 
       <section id="contato" className="bg-japan-ink px-5 py-24 text-white md:px-8">
         <div className="mx-auto flex max-w-5xl flex-col items-center text-center">
-          <p className="text-sm uppercase tracking-[0.24em] text-white/58">Próximo passo</p>
-          <h2 className="mt-4 font-serifDisplay text-4xl leading-tight md:text-6xl">
-            Vamos planejar sua viagem dos sonhos?
-          </h2>
-          <a
-            href={WA_LINK}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="mt-8 inline-flex items-center gap-2 rounded-full bg-japan-red px-8 py-4 text-sm font-semibold text-white transition hover:bg-[#a81f1f]"
-          >
-            <WhatsAppIcon />
-            Chamar no WhatsApp
-          </a>
-          <div className="mt-10 w-full max-w-sm">
-  <div className="flex items-center gap-3 text-white/50">
-    <div className="h-px flex-1 bg-white/20" />
-    <span className="text-xs text-white/50">Acompanhe nosso dia a dia no Japão:</span>
-    <div className="h-px flex-1 bg-white/20" />
-  </div>
+          <FadeIn>
+            <p className="text-sm uppercase tracking-[0.24em] text-white/58">Próximo passo</p>
+            <h2 className="mt-4 font-serifDisplay text-4xl leading-tight md:text-6xl">
+              Vamos planejar sua viagem dos sonhos?
+            </h2>
 
-  <div className="mt-6 flex justify-center gap-10">
-    <a href="https://instagram.com/guiajapao_incrivel" target="_blank" rel="noopener noreferrer" className="flex flex-col items-center gap-2 text-white/70 hover:text-white transition">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.5} strokeLinecap="round" strokeLinejoin="round" className="h-7 w-7 text-japan-red">
-        <rect x="2" y="2" width="20" height="20" rx="5" />
-        <circle cx="12" cy="12" r="4" />
-        <circle cx="17.5" cy="6.5" r="0.5" fill="currentColor" />
-      </svg>
-      <span className="text-xs text-white/60">guiajapao_incrivel</span>
-    </a>
+            <a href={WA_LINK} target="_blank" rel="noopener noreferrer"
+              className="mt-8 inline-flex items-center gap-2 rounded-full bg-japan-red px-8 py-4 text-sm font-semibold text-white transition hover:bg-[#a81f1f]"
+            >
+              <WhatsAppIcon />
+              Chamar no WhatsApp
+            </a>
+          </FadeIn>
 
-    <a href="https://tiktok.com/@guiajapao_incrivel" target="_blank" rel="noopener noreferrer" className="flex flex-col items-center gap-2 text-white/70 hover:text-white transition">
-      <svg viewBox="0 0 24 24" fill="currentColor" className="h-7 w-7 text-japan-red">
-        <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 0 0-.79-.05 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.33-6.34V8.69a8.18 8.18 0 0 0 4.78 1.52V6.75a4.85 4.85 0 0 1-1.01-.06z"/>
-      </svg>
-      <span className="text-xs text-white/60">guiajapao_incrivel</span>
-    </a>
+          <FadeIn delay={0.15}>
+            <div className="mt-10 w-full max-w-sm">
+              <div className="flex items-center gap-3 text-white/50">
+                <div className="h-px flex-1 bg-white/20" />
+                <span className="text-xs text-white/50">Acompanhe nosso dia a dia no Japão:</span>
+                <div className="h-px flex-1 bg-white/20" />
+              </div>
 
-    <a href="https://www.facebook.com/profile.php?id=61584766612881&locale=pt_BR" target="_blank" rel="noopener noreferrer" className="flex flex-col items-center gap-2 text-white/70 hover:text-white transition">
-      <svg viewBox="0 0 24 24" fill="currentColor" className="h-7 w-7 text-japan-red">
-        <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
-      </svg>
-      <span className="text-xs text-white/60">Guia Japão Incrível</span>
-    </a>
-  </div>
-</div>
+              <div className="mt-6 flex justify-center gap-10">
+                <a href="https://instagram.com/guiajapao_incrivel" target="_blank" rel="noopener noreferrer" className="flex flex-col items-center gap-2 text-white/70 hover:text-white transition">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.5} strokeLinecap="round" strokeLinejoin="round" className="h-7 w-7 text-japan-red">
+                    <rect x="2" y="2" width="20" height="20" rx="5" />
+                    <circle cx="12" cy="12" r="4" />
+                    <circle cx="17.5" cy="6.5" r="0.5" fill="currentColor" />
+                  </svg>
+                  <span className="text-xs text-white/60">guiajapao_incrivel</span>
+                </a>
+
+                <a href="https://tiktok.com/@guiajapao_incrivel" target="_blank" rel="noopener noreferrer" className="flex flex-col items-center gap-2 text-white/70 hover:text-white transition">
+                  <svg viewBox="0 0 24 24" fill="currentColor" className="h-7 w-7 text-japan-red">
+                    <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 0 0-.79-.05 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.33-6.34V8.69a8.18 8.18 0 0 0 4.78 1.52V6.75a4.85 4.85 0 0 1-1.01-.06z" />
+                  </svg>
+                  <span className="text-xs text-white/60">guiajapao_incrivel</span>
+                </a>
+
+                <a href="https://www.facebook.com/profile.php?id=61584766612881&locale=pt_BR" target="_blank" rel="noopener noreferrer" className="flex flex-col items-center gap-2 text-white/70 hover:text-white transition">
+                  <svg viewBox="0 0 24 24" fill="currentColor" className="h-7 w-7 text-japan-red">
+                    <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
+                  </svg>
+                  <span className="text-xs text-white/60">Guia Japão Incrível</span>
+                </a>
+              </div>
+            </div>
+          </FadeIn>
         </div>
       </section>
 
